@@ -1,11 +1,78 @@
 page-agenda {
-    ion-content{
-        background: rgba(254, 100, 100, 1);
+  ion-content {
+    position: relative;
+    background: rgba(254, 100, 100, 1);
     background: linear-gradient(
       135deg,
       rgba(254, 100, 100, 1) 0%,
       rgba(224, 15, 36, 1) 100%
     );
-    }
+  }
 
+  .calendario-agenda {
+    text-align: center;
+    color: #fff;
+
+    .mes {
+      position: relative;
+      top: 40px;
+      font-weight: 700;
+    }
+    .dia {
+      font-weight: 700;
+      font-size: 7rem;
+    }
+    .ano {
+      position: relative;
+      top: -75px;
+    }
+  }
+
+  .content-icon {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: -1;
+
+    transform: translate(-50%, 0);
+    ion-icon {
+      color: #e00d23;
+      font-size: 25rem;
+      font-weight: 700;
+    }
+  }
+
+  .text-service{
+      color: #fff;
+      font-weight: 700;
+  }
+
+  .content-servico{
+      position: relative;
+      padding: 5px 5px 5px 5px;
+      background: rgba(255,255,255,.3);
+      border-radius: 30px;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      margin-bottom: 10px;
+
+      p{
+          margin-left: 10px;
+          font-weight: 700;
+      }
+
+      span{
+          position: absolute;
+          right: 55px;
+          top: 10px;
+          font-size: 3rem;
+          font-weight: 700;
+      }
+
+      ion-icon{
+        position: absolute;
+        right: 30px;
+        top: 20px;
+      }
+  }
 }

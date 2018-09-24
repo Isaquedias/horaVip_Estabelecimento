@@ -15,7 +15,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AgendaPage {
 
+  private mon = new Array(
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro' );
+
+    public mes : any;
+    public dia : any;
+    public ano : any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    let now = new Date();
+    this.mes = this.mon[now.getMonth()];
+    this.dia = now.getDate();
+    this.ano = now.getFullYear();
+
+  }
+
+  irPagina(){
+    this.navCtrl.push("AgendaClientePage");
   }
 
   ionViewDidLoad() {

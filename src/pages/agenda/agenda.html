@@ -1,16 +1,53 @@
 <ion-header>
+  <ion-toolbar no-border-top color="vermelho">
+    <ion-title>Agenda</ion-title>
 
-    <ion-toolbar no-border-top color="vermelho">
-        <ion-title>Agenda</ion-title>
-    
-      <button  ion-button menuToggle left>
-        <img width="30px"  src="assets/imgs/Prancheta1.png">
-      </button>
-    </ion-toolbar>
-
+    <button ion-button menuToggle left>
+      <img width="30px" src="assets/imgs/Prancheta1.png">
+    </button>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
+  <div class="calendario-agenda">
+    <div class="content-agenda">
+      <div class="mes">
+        <p>{{mes}}</p>
+      </div>
+      <div class="dia">
+        <p>{{dia}}</p>
+      </div>
+      <div class="ano">
+        <p>{{ano}}</p>
+      </div>
+    </div>
 
+    <div class="content-icon">
+      <ion-icon name="ios-calendar-outline"></ion-icon>
+    </div>
+  </div>
+
+  <p class="text-service">Agendados para hoje</p>
+
+  <div class="content-servico" (click)="irPagina()">
+    <p>Corte de Cabelo</p> <span>3</span>
+    <ion-icon name="md-arrow-dropright"></ion-icon>
+  </div>
+  <div class="content-servico" (click)="irPagina()">
+    <p>Depilação</p> <span>3</span>
+    <ion-icon name="md-arrow-dropright"></ion-icon>
+  </div>
+  <div class="content-servico" (click)="irPagina()">
+    <p>Barba</p> <span>3</span>
+    <ion-icon name="md-arrow-dropright"></ion-icon>
+  </div>
+  <div class="content-servico" (click)="irPagina()">
+    <p>Manicure</p> <span>3</span>
+    <ion-icon name="md-arrow-dropright"></ion-icon>
+  </div>
+  <div class="content-servico" (click)="irPagina()">
+    <p>Pedicure</p> <span>3</span>
+    <ion-icon name="md-arrow-dropright"></ion-icon>
+  </div>
 </ion-content>
