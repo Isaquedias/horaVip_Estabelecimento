@@ -1,3 +1,11 @@
 page-agenda {
+    ion-content{
+        background: rgba(254, 100, 100, 1);
+    background: linear-gradient(
+      135deg,
+      rgba(254, 100, 100, 1) 0%,
+      rgba(224, 15, 36, 1) 100%
+    );
+    }
 
 }
