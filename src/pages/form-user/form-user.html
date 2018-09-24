@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="horavip">
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #meusDados="ngForm" novalidate>
+    <ion-item>
+      <ion-label color="primary" stacked>Nome</ion-label>
+      <ion-input type="text" name="name" [value]="dados.name" placeholder="Nome completo" ngModel></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Data de Nascimento</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dados.birth" name="birth" placeholder="08/05/1993"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Gênero</ion-label>
+      <ion-select name="genre" ngModel multiple="false">
+        <ion-option value="masculino" selected="{{ dados.genre == 'masculino' ? true : ''}}">Masculino</ion-option>
+        <ion-option value="femenino"  selected="{{ dados.genre == 'femenino' ? true : ''}}">Feminino</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Telefone</ion-label>
+      <ion-input type="number" name="phoneNumber" [value]="dados.phoneNumber" placeholder="(99) 99999-9999" ngModel></ion-input>
+    </ion-item>
+
+  </form>
+  <ion-fab right bottom (click)="pageSalao(meusDados)">
+    <button color="horavip" ion-fab mini>
+      <ion-icon name="md-arrow-round-forward"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

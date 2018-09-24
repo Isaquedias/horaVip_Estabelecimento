@@ -1,0 +1,7 @@
+{
+  "name": "horaVip",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

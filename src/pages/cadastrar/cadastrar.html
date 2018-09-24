@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastrar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="cadastro" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label>Nome</ion-label>
+        <ion-input type="text" formControlName="name" placeholder="Digite seu nome"></ion-input>
+      </ion-item>
+      <!-- <small *ngIf="cadastro.get('name').valid && cadastro.get('name').touched" class="text-valid">OK</small>
+      <small *ngIf="cadastro.get('name').invalid && cadastro.get('name').touched" class="text-invalid">Compo Vazio</small> -->
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="email" formControlName="email" placeholder="exempo@exemplo.com"></ion-input>
+
+      </ion-item>
+      <!-- <small *ngIf="cadastro.get('email').valid && cadastro.get('email').touched" class="text-valid">OK</small>
+      <small *ngIf="cadastro.get('email').invalid && cadastro.get('email').touched" class="text-invalid">E-mail Inválido</small> -->
+
+      <ion-item>
+        <ion-label>Senha</ion-label>
+        <ion-input type="password" formControlName="password" placeholder="Minimo 6 caracteres"></ion-input>
+      </ion-item>
+      <!-- <small *ngIf="cadastro.get('password').valid && cadastro.get('password').touched" class="text-valid">OK</small>
+      <small *ngIf="cadastro.get('password').invalid && cadastro.get('password').touched" class="text-invalid">Senha Inválida</small> -->
+
+
+      <ion-item>
+        <ion-label>Confime sua senha</ion-label>
+        <ion-input type="password" formControlName="passwordConf" placeholder="Minimo 6 caracteres"></ion-input>
+      </ion-item>
+
+      <!-- <small *ngIf="(cadastro.get('passwordConf').valid && cadastro.get('passwordConf').touched) && (cadastro.get('passwordConf').value === cadastro.get('password').value)"
+        class="text-valid">OK</small>
+      <small *ngIf="(cadastro.get('passwordConf').invalid && cadastro.get('passwordConf').touched) || (cadastro.get('passwordConf').value !== cadastro.get('password').value)"
+        class="text-invalid">Senha Inválida</small> -->
+    </ion-list>
+    <div padding></div>
+
+    <button (click)="cadastrar()" ion-button full>Cadastrar</button>
+  </form>
+</ion-content>

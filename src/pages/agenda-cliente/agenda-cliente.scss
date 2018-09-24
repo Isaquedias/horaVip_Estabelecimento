@@ -1,0 +1,52 @@
+page-agenda-cliente {
+    .toolbar-md-branco .bar-button-clear-md, .toolbar-md-branco .bar-button-default-md, .toolbar-md-branco .bar-button-outline-md, .toolbar-md-branco .toolbar-title-md{
+        color: #e00f24 !important;
+    } 
+
+    .clientes{
+        background: #f9f9f9;
+        padding: 11px 5px 24px 5px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+        position: relative;
+        .online{
+            position: absolute;
+            height: 7px;
+            width: 7px;
+            background: #08ff00;
+            border-radius: 50%;
+            right: 15px;
+        }
+
+        .avatar-cliente img{
+            border-radius: 50%;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .content{
+            color: #e00f24;
+            p{
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .nome{
+                font-size: 1.8rem;
+            }
+
+            .servico{
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+
+            .horario{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+
+        
+    }
+}

@@ -1,0 +1,38 @@
+page-apresentacao {
+  ion-slide {
+    background: rgba(254, 100, 100, 1);
+    background: linear-gradient(
+      135deg,
+      rgba(254, 100, 100, 1) 0%,
+      rgba(224, 15, 36, 1) 100%
+    );
+  }
+
+  ion-toolbar{
+      position: absolute;
+      top: 0;
+  }
+
+  .slide-1 {
+    .slide-title {
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: #fff !important;
+  }
+
+  .toolbar-background-md {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+  }
+
+  .pular-slide {
+    color: #fff;
+    ion-icon{
+        margin-left: 5px;
+    }
+  }
+}

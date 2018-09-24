@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar color="horavip">
+    <ion-title>Configuração</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-avatar *ngIf="photoPerfil != null">
+    <img (click)="openGalaria()" style="width: 140px; height: 140px;" [src]="photoPerfil" />
+  </ion-avatar>
+
+  <ion-list>
+
+    <ion-item-group>
+      <button ion-item (click)="showPrompt()">
+        <ion-icon name="cut" item-start color="horavip"></ion-icon>
+        <ion-label>{{displayName}}</ion-label>
+      </button>
+
+      <button ion-item (click)="presentContacts()">
+        <ion-icon name="call" item-start color="horavip"></ion-icon>
+        <ion-label>Contatos</ion-label>
+      </button>
+
+      <button ion-item (click)="presentEndereco()">
+        <ion-icon name="home" item-start color="horavip"></ion-icon>
+        <ion-label>Endereço</ion-label>
+      </button>
+
+      <button ion-item (click)="presentGaleria()">
+        <ion-icon name="images" item-start color="horavip"></ion-icon>
+        <ion-label>Galeria</ion-label>
+      </button>
+
+      <button ion-item (click)="presentGaleria()">
+        <ion-icon name="locate" item-start color="horavip"></ion-icon>
+        <ion-label>Localidade</ion-label>
+      </button>
+    </ion-item-group>
+
+  </ion-list>
+
+</ion-content>

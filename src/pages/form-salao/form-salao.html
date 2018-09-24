@@ -1,0 +1,78 @@
+<ion-header>
+
+  <ion-navbar color="horavip">
+
+    <ion-title>
+      Endereço
+    </ion-title>
+
+    <ion-buttons end>
+      <button type="submit" ion-button icon-only (click)="send()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding>
+  <p padding>
+    Preencha o campo CEP para completa o compos
+
+  </p>
+  <form [formGroup]="enderecoForm" novalidate>
+
+    <ion-list>
+      <ion-item>
+        <ion-label color="horavip" stacked>CEP</ion-label>
+        <ion-input (change)="getCep(cepVar)" #cepVar formControlName="cep" type="number" placeholder="123456789"></ion-input>
+      </ion-item>
+      <small *ngIf="cepValidate && enderecoForm.get('cep').touched" class="text-valid">OK</small>
+      <small *ngIf="!cepValidate && enderecoForm.get('cep').touched" class="text-invalid">*CEP inválido</small>
+
+      <ion-item>
+        <ion-label color="horavip" stacked>Número</ion-label>
+        <ion-input formControlName="numero" type="number" placeholder="Número do salão"></ion-input>
+      </ion-item>
+      <small *ngIf="enderecoForm.get('numero').valid && enderecoForm.get('numero').touched" class="text-valid">OK</small>
+      <small *ngIf="!enderecoForm.get('numero').valid && enderecoForm.get('numero').touched" class="text-invalid">*Campo obrigatório</small>
+
+      <ion-item>
+        <ion-label color="horavip" stacked>Complemento</ion-label>
+        <ion-input formControlName="complemento" type="text" placeholder="Em frente a escola aprender"></ion-input>
+      </ion-item>
+      <small *ngIf="enderecoForm.get('complemento').valid && enderecoForm.get('complemento').touched" class="text-valid">OK</small>
+      <small *ngIf="!enderecoForm.get('complemento').valid && enderecoForm.get('complemento').touched" class="text-invalid">*Campo obrigatório</small>
+
+      <ion-item>
+        <ion-label color="horavip" stacked>Rua</ion-label>
+        <ion-input formControlName="rua" type="text" placeholder="Nome da rua"></ion-input>
+      </ion-item>
+      <small *ngIf="enderecoForm.get('rua').valid && enderecoForm.get('rua').touched" class="text-valid">OK</small>
+      <small *ngIf="!enderecoForm.get('rua').valid && enderecoForm.get('rua').touched" class="text-invalid">*Campo obrigatório</small>
+
+      <ion-item>
+        <ion-label color="horavip" stacked>Bairro</ion-label>
+        <ion-input formControlName="bairro" type="text" placeholder="Nome do bairro"></ion-input>
+      </ion-item>
+      <small *ngIf="enderecoForm.get('bairro').valid && enderecoForm.get('bairro').touched" class="text-valid">OK</small>
+      <small *ngIf="!enderecoForm.get('bairro').valid && enderecoForm.get('bairro').touched" class="text-invalid">*Campo obrigatório</small>
+
+      <ion-item>
+        <ion-label color="horavip" stacked>Cidade</ion-label>
+        <ion-input formControlName="cidade" type="text" placeholder="Nome do bairro"></ion-input>
+      </ion-item>
+      <small *ngIf="enderecoForm.get('cidade').valid && enderecoForm.get('cidade').touched" class="text-valid">OK</small>
+      <small *ngIf="!enderecoForm.get('cidade').valid && enderecoForm.get('cidade').touched" class="text-invalid">*Campo obrigatório</small>
+
+      <ion-item>
+        <ion-label color="horavip" stacked>Estado</ion-label>
+        <ion-input formControlName="estado" type="text" placeholder="PA"></ion-input>
+      </ion-item>
+      <small *ngIf="enderecoForm.get('estado').valid && enderecoForm.get('estado').touched" class="text-valid">OK</small>
+      <small *ngIf="!enderecoForm.get('estado').valid && enderecoForm.get('estado').touched" class="text-invalid">*Campo obrigatório</small>
+
+    </ion-list>
+  </form>
+
+</ion-content>

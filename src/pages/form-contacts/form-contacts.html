@@ -1,0 +1,41 @@
+<ion-header>
+
+    <ion-navbar color="horavip">
+  
+      <ion-title>
+        Contatos
+      </ion-title>
+  
+      <ion-buttons end>
+        <button ion-button icon-only (click)="send()">
+          <ion-icon name="checkmark"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content padding>
+  <p>
+    Informe os meios de contato do seu estabelecimento abaixo.
+    </p>
+    <form [formGroup]="contatoForm" novalidate>
+
+        <ion-item>
+          <ion-label color="horavip" stacked>Celular</ion-label>
+          <ion-input type="number" formControlName="celular" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="horavip" stacked>Fixo</ion-label>
+            <ion-input type="number" formControlName="fixo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="horavip" stacked>Whatsapp</ion-label>
+            <ion-input type="number" formControlName="whatsap"></ion-input>
+        </ion-item>
+    
+      </form>
+</ion-content>

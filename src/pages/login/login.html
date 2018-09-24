@@ -1,0 +1,40 @@
+<ion-content padding>
+
+  <p class="boas-vindas">Olá, Seja Bem-Vindo de Volta.</p>
+
+  <form [formGroup]="loginForm" novalidate>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="text" value="ysaquedias@gmail.com" formControlName="email"></ion-input>
+      </ion-item>
+      <!-- <small *ngIf="loginForm.get('email').valid && loginForm.get('email').touched" class="text-valid">OK</small>
+      <small *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched" class="text-invalid">E-mail Inválido</small>
+   -->
+      <ion-item>
+        <ion-label>Senha</ion-label>
+        <ion-input type="password" value="123456" formControlName="password"></ion-input>
+      </ion-item>
+      <!-- <small *ngIf="loginForm.get('password').valid && loginForm.get('password').touched" class="text-valid">OK</small>
+      <small *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched" class="text-invalid">Senha Inválida</small> -->
+  
+    </ion-list>
+  </form>
+
+  <ion-grid class="action-reg-cap">
+    <ion-row>
+      <ion-col (click)="redefinirSenha()">
+        <p text-start>Esqueci a senha</p>
+      </ion-col>
+      <ion-col (click)="cadastrar()">
+        <p text-end>Cadastre-se!</p>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <button ion-button full (click)="loginIn()">Entrar</button>
+  <p text-center>ou</p>
+
+  <button color="facebook" ion-button full>Entra com o Facebook</button>
+</ion-content>
